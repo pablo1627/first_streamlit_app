@@ -24,7 +24,7 @@ streamlit.dataframe(fruits_to_show)
 # Display the table on the page.
 #streamlit.dataframe(my_fruit_list)
 
-streamlit.stop
+
 
 #def get_fruityvice_data(this_fruit_choice):
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ this_fruit_choice)
@@ -48,7 +48,7 @@ try:
 
 
 
-
+streamlit.stop()
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from fruit_load_list")
